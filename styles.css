@@ -1456,3 +1456,63 @@ input:focus, select:focus, textarea:focus { border-color: var(--teal-dark); }
 }
 .review-platforms { grid-template-columns: repeat(auto-fit, minmax(min(100%, 148px), 1fr)); }
 @media (max-width: 480px) { .platform-card { padding: 12px 12px 10px; gap: 4px; } .platform-logo { max-height: 22px; } .platform-score strong { font-size: 24px; } .platform-score .stars { font-size: 12px; } .platform-card small { font-size: 11.5px; line-height: 1.35; } }
+
+/* ================================================================
+   2026-10-06 · Ontruiming: before / after
+   ================================================================ */
+.ba-grid { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: clamp(12px, 2vw, 22px); }
+.ba-card { position: relative; margin: 0; border-radius: 22px; overflow: hidden; background: #fff; box-shadow: var(--shadow-md); }
+.ba-card img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+.ba-card figcaption { padding: 14px 18px 16px; color: #3d5c65; font-size: 15px; font-weight: 650; }
+.ba-tag { position: absolute; top: 14px; left: 14px; z-index: 1; padding: 6px 14px; border-radius: 999px; background: rgba(8, 38, 48, .82); color: #fff; font-size: 13px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; backdrop-filter: blur(4px); }
+.ba-card.is-after .ba-tag { background: var(--orange); color: #1d1300; }
+.ba-card.is-after { outline: 3px solid var(--orange); outline-offset: -3px; }
+.ba-arrow { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; background: var(--teal-dark); color: #fff; font-size: 22px; font-weight: 800; box-shadow: var(--shadow-sm); }
+@media (max-width: 760px) {
+  .ba-grid { grid-template-columns: 1fr; }
+  .ba-arrow { justify-self: center; transform: rotate(90deg); width: 42px; height: 42px; margin: -6px 0; }
+}
+
+/* 2026-10-06 · readability: no text under 12px */
+.authority-item span, .trust-band span, .trust-item span { font-size: 12px !important; letter-spacing: .06em; }
+.calculator-panel small, .m3-hint, .box-converter span, .calc-note, small.field-help { font-size: 12.5px; }
+.lead-magnet em, .checklist-cta em { font-size: 12.5px; }
+@media (max-width: 480px) { .platform-card small { font-size: 12px; } }
+.box-equivalent > span, .m3-selection > span { font-size: 12px; }
+
+/* ================================================================
+   2026-10-06 · Mobile design pass
+   ================================================================ */
+@media (max-width: 760px) {
+  /* Hero: headline and actions first, photo after (short, cropped). */
+  .home-hero .hero-grid { display: flex; flex-direction: column; gap: 22px; }
+  .home-hero .hero-copy { order: 1; }
+  .home-hero .hero-photo { order: 2; width: 100%; height: auto; min-height: 0; margin: 0; }
+  .home-hero .hero-photo img { height: auto; min-height: 0; aspect-ratio: 16 / 10; max-height: 240px; object-position: center 55%; }
+  .home-hero .hero-actions .button { width: 100%; justify-content: center; }
+  .home-hero h1 { font-size: clamp(32px, 9vw, 40px); }
+
+  /* Trust band and authority band: compact 2 x 2 instead of 4 tall cards. */
+  .trust-grid { grid-template-columns: 1fr 1fr !important; gap: 10px !important; padding-block: 18px !important; }
+  .trust-grid .trust-item { flex-direction: column; align-items: flex-start; gap: 8px; padding: 12px 12px 14px !important; min-height: 0 !important; border-top: 1px solid var(--line) !important; border-left: 1px solid var(--line) !important; }
+  .trust-grid .trust-item .trust-ico { width: 36px; height: 36px; border-radius: 10px; }
+  .trust-grid .trust-item strong { font-size: 13.5px; line-height: 1.3; }
+  .authority-band .authority-grid { grid-template-columns: 1fr 1fr !important; gap: 10px; }
+  .authority-band .authority-item, .authority-band .authority-item:nth-child(3), .authority-band .authority-item:nth-child(4) { grid-template-columns: 1fr !important; gap: 6px; min-height: 0 !important; padding: 12px !important; border: 1px solid var(--line) !important; }
+  .authority-band .authority-item .authority-icon { width: 36px; height: 36px; border-radius: 10px; }
+  .authority-band .authority-item strong { font-size: 13.5px; }
+  .authority-logo { height: 18px; }
+
+  /* Work photos: swipeable row instead of three full-height photos. */
+  .photo-grid { display: flex !important; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; margin-inline: -16px; padding: 0 16px 8px; scroll-padding-inline: 16px; scrollbar-width: none; }
+  .photo-grid::-webkit-scrollbar { display: none; }
+  .photo-grid .photo-card { flex: 0 0 80%; min-height: 0; scroll-snap-align: start; }
+  .photo-grid .photo-card img { min-height: 0; height: auto; aspect-ratio: 4 / 5; }
+
+  /* Section rhythm a little tighter on phones. */
+  .section { padding-block: clamp(44px, 11vw, 64px); }
+  .section-heading { gap: 10px; margin-bottom: 22px; }
+}
+@media (max-width: 400px) {
+  .trust-grid .trust-item strong, .authority-band .authority-item strong { font-size: 12.5px; }
+}
