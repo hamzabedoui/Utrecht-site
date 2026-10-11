@@ -21,6 +21,25 @@
     });
   }
 
+  // Dropdown groups in the main navigation (Diensten, Werkgebied).
+  const groups = document.querySelectorAll('#site-nav .nav-group');
+  const closeGroups = (except) => groups.forEach((group) => {
+    if (group === except) return;
+    group.classList.remove('open');
+    group.querySelector('.nav-caret')?.setAttribute('aria-expanded', 'false');
+  });
+  groups.forEach((group) => {
+    const caret = group.querySelector('.nav-caret');
+    caret?.addEventListener('click', () => {
+      const opening = !group.classList.contains('open');
+      closeGroups(group);
+      group.classList.toggle('open', opening);
+      caret.setAttribute('aria-expanded', String(opening));
+    });
+  });
+  document.addEventListener('click', (event) => { if (!event.target.closest('#site-nav .nav-group')) closeGroups(); });
+  document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeGroups(); });
+
   // Measurement: one dataLayer event per contact action, read by Google Tag Manager.
   // Tags in GTM decide what is sent to GA4 / Google Ads, and only with consent.
   window.dataLayer = window.dataLayer || [];

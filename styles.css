@@ -1516,3 +1516,31 @@ input:focus, select:focus, textarea:focus { border-color: var(--teal-dark); }
 @media (max-width: 400px) {
   .trust-grid .trust-item strong, .authority-band .authority-item strong { font-size: 12.5px; }
 }
+
+/* ===== SEO navigation with dropdowns (2026-10-11) ===== */
+#site-nav a { white-space: nowrap; }
+.nav-group { position: relative; display: flex; align-items: center; }
+.nav-caret { width: 26px; height: 44px; margin-left: -10px; padding: 0; display: inline-flex; align-items: center; justify-content: center; border: 0; background: transparent; color: #284e54; cursor: pointer; }
+.nav-caret::before { content: ""; width: 7px; height: 7px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .18s ease; }
+.nav-group.open > .nav-caret::before { transform: translateY(2px) rotate(-135deg); }
+.nav-sub { position: absolute; top: 100%; left: 0; z-index: 60; min-width: 230px; padding: var(--s2); display: none; flex-direction: column; border: 1px solid var(--line); border-radius: 14px; background: var(--white); box-shadow: var(--shadow-sm); }
+#site-nav .nav-sub a { min-height: 40px; padding: 0 12px; border-bottom: 0; font-weight: 600; }
+.nav-group.open > .nav-sub { display: flex; }
+#site-nav .nav-group.is-current > .nav-parent { color: var(--teal-deep); border-color: var(--orange); }
+.nav-extra { display: none !important; }
+@media (min-width: 1061px) {
+  .nav-group:hover > .nav-sub, .nav-group:focus-within > .nav-sub { display: flex; }
+}
+@media (max-width: 1060px) {
+  .menu-toggle { display: flex; order: 2; }
+  .header-cta { order: 1; }
+  #site-nav { position: absolute; inset: 100% 0 auto; max-height: calc(100vh - 74px); padding: var(--s4) var(--s5) var(--s6); display: none; flex-direction: column; align-items: stretch; gap: 0; overflow: auto; border-bottom: 1px solid var(--line); background: var(--white); box-shadow: var(--shadow-sm); }
+  #site-nav.open { display: flex; }
+  #site-nav a { min-height: 54px; padding-inline: 13px; border-bottom: 1px solid var(--line); border-radius: 0; font-size: 16px; }
+  .nav-group { flex-wrap: wrap; align-items: stretch; }
+  .nav-group > .nav-parent { flex: 1; }
+  .nav-caret { width: 54px; height: 54px; margin: 0; border-bottom: 1px solid var(--line); }
+  .nav-sub { position: static; width: 100%; min-width: 0; padding: 0 0 0 var(--s4); border: 0; border-radius: 0; box-shadow: none; }
+  #site-nav .nav-sub a { min-height: 48px; font-size: 15px; border-bottom: 1px solid var(--line); }
+  .nav-extra { display: flex !important; }
+}
