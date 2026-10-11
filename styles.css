@@ -1544,3 +1544,25 @@ input:focus, select:focus, textarea:focus { border-color: var(--teal-dark); }
   #site-nav .nav-sub a { min-height: 48px; font-size: 15px; border-bottom: 1px solid var(--line); }
   .nav-extra { display: flex !important; }
 }
+
+/* ===== Footer: five columns, legal bar (2026-10-11) ===== */
+.footer-grid { grid-template-columns: 1.3fr repeat(4, 1fr); gap: var(--s6); }
+.footer-logo { display: inline-block; }
+.footer-address { display: flex; flex-direction: column; gap: var(--s2); font-style: normal; }
+.footer-address span { padding-block: 10px; }
+.footer-rating { color: #ffc667 !important; font-weight: 700; }
+.footer-bottom { align-items: center; }
+.footer-legal a { min-height: 44px; display: inline-flex; align-items: center; color: inherit; text-underline-offset: 3px; }
+@media (max-width: 1060px) {
+  .footer-grid { grid-template-columns: repeat(4, 1fr); }
+  .footer-grid > .footer-brand { grid-column: 1 / -1; }
+  .footer-grid > div:last-child { grid-column: auto; }
+}
+@media (max-width: 820px) {
+  .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s6) var(--s4); }
+  .footer-grid > div:last-child { grid-column: auto; overflow-wrap: anywhere; }
+  .footer-bottom { align-items: flex-start; }
+}
