@@ -1591,3 +1591,18 @@ input:focus, select:focus, textarea:focus { border-color: var(--teal-dark); }
   .reviews-grid { margin-inline: -16px; padding: 4px 16px 14px; display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 16px; }
   .reviews-grid li { flex: 0 0 86%; scroll-snap-align: start; }
 }
+
+/* ===== Responsive fixes (2026-10-11) ===== */
+.nav-caret { width: 36px; margin-left: -14px; }
+.content-grid > *, .local-check-grid > *, .faq-grid > * { min-width: 0; }
+h1, h2, h3 { overflow-wrap: break-word; }
+@media (max-width: 1060px) {
+  .nav-caret { width: 54px; margin-left: 0; }
+}
+@media (max-width: 640px) {
+  .footer-grid > div { gap: 0; }
+  .footer-grid strong { margin-bottom: var(--s1); }
+  .footer-address { gap: 0; }
+  .footer-legal { column-gap: var(--s4); row-gap: 0; }
+  .footer-bottom { gap: var(--s2); padding-bottom: var(--s4); }
+}
