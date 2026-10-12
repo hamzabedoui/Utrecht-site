@@ -37,9 +37,6 @@
     <div class="wrap utility-bar__row">
       <span class="utility-bar__area"><svg class="icon" aria-hidden="true"><use href="assets/img/bcz-icons.svg#pin"></use></svg>Utrecht en omgeving</span>
       <div class="utility-bar__links">
-        <a href="m3-calculator.html">m³ calculator</a>
-        <a href="werkwijze.html">Werkwijze</a>
-        <a href="over-ons.html">Over ons</a>
         <a href="mailto:info@busje-komtzo.nl"><svg class="icon" aria-hidden="true"><use href="assets/img/bcz-icons.svg#mail"></use></svg>info@busje-komtzo.nl</a>
         <a href="tel:+31850508282"><svg class="icon" aria-hidden="true"><use href="assets/img/bcz-icons.svg#phone"></use></svg>085 050 8282</a>
       </div>
@@ -50,8 +47,8 @@
     <nav class="site-nav" id="site-nav" aria-label="Hoofdnavigatie">
       <ul>
         <li><a href="verhuisbedrijf-utrecht.html">Verhuisbedrijf Utrecht</a></li>
-        <li class="has-sub"><a href="diensten.html">Diensten</a>
-          <ul class="sub">
+        <li class="has-sub"><a href="diensten.html">Diensten</a><button class="nav-caret" type="button" aria-expanded="false" aria-controls="nav-sub-diensten"><span class="visually-hidden">Toon diensten</span></button>
+          <ul class="sub" id="nav-sub-diensten">
             <li><a href="particulier-verhuizen.html">Particulier verhuizen</a></li>
             <li><a href="zakelijk-verhuizen.html">Zakelijk verhuizen</a></li>
             <li><a href="interne-verhuizing.html">Interne verhuizing</a></li>
@@ -62,8 +59,8 @@
           </ul>
         </li>
         <li><a href="tarieven.html">Tarieven</a></li>
-        <li class="has-sub"><a href="werkgebied-utrecht.html">Werkgebied</a>
-          <ul class="sub">
+        <li class="has-sub"><a href="werkgebied-utrecht.html">Werkgebied</a><button class="nav-caret" type="button" aria-expanded="false" aria-controls="nav-sub-werkgebied"><span class="visually-hidden">Toon werkgebied</span></button>
+          <ul class="sub" id="nav-sub-werkgebied">
             <li><a href="verhuisbedrijf-nieuwegein.html">Nieuwegein</a></li>
             <li><a href="verhuisbedrijf-zeist.html">Zeist</a></li>
             <li><a href="verhuisbedrijf-houten.html">Houten</a></li>
@@ -79,7 +76,6 @@
         <li class="nav-extra"><a href="over-ons.html">Over ons</a></li>
       </ul>
     </nav>
-    <a class="header-call" href="tel:+31850508282"><svg class="icon" aria-hidden="true"><use href="assets/img/bcz-icons.svg#phone"></use></svg>085 050 8282</a>
     <a class="btn btn--primary header-cta" href="offerte.html">Offerte aanvragen</a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="nav-toggle__bars" aria-hidden="true"></span>Menu</button>
   </div>
@@ -130,7 +126,7 @@
         <h2 id="werk-title">Voorbereid materieel en zorgvuldig ingepakte inboedel.</h2>
         <p>Deze foto's zijn door het bedrijf aangeleverd en tonen echte verhuizingen, eigen materieel en zorgvuldig beschermd meubilair.</p>
       </div>
-      <div class="scroller photo-row" role="region" aria-label="Foto's van echte verhuizingen" tabindex="0">
+      <div class="scroller photo-row" data-carousel="foto" role="region" aria-label="Foto's van echte verhuizingen" tabindex="0">
         <figure class="photo"><img src="assets/img/real-moving-lift-utrecht-480.webp" srcset="assets/img/real-moving-lift-utrecht-480.webp 480w, assets/img/real-moving-lift-utrecht-720.webp 720w" sizes="(min-width: 48rem) 30vw, 80vw" width="720" height="960" loading="lazy" decoding="async" alt="Verhuiswagen en verhuislift van Busje komt zo bij een woning in Utrecht"><figcaption><svg class="icon" aria-hidden="true"><use href="assets/img/bcz-icons.svg#truck"></use></svg>Eigen verhuiswagen en lift ingezet bij een Utrechtse woning</figcaption></figure>
         <figure class="photo"><img src="assets/img/real-moving-lift-overview-480.webp" srcset="assets/img/real-moving-lift-overview-480.webp 480w, assets/img/real-moving-lift-overview-800.webp 800w" sizes="(min-width: 48rem) 30vw, 80vw" width="800" height="450" loading="lazy" decoding="async" alt="Busje komt zo verhuiswagen en verhuislift tijdens een verhuizing"><figcaption><svg class="icon" aria-hidden="true"><use href="assets/img/bcz-icons.svg#lift"></use></svg>Verhuislift en wagen klaar voor het werk</figcaption></figure>
         <figure class="photo"><img src="assets/img/real-wrapped-cabinet-480.webp" srcset="assets/img/real-wrapped-cabinet-480.webp 480w, assets/img/real-wrapped-cabinet-720.webp 720w" sizes="(min-width: 48rem) 30vw, 80vw" width="720" height="960" loading="lazy" decoding="async" alt="Verhuizer van Busje komt zo beschermt een kast met verhuisdekens en folie"><figcaption><svg class="icon" aria-hidden="true"><use href="assets/img/bcz-icons.svg#box"></use></svg>Kast beschermd met dekens en wikkelfolie</figcaption></figure>
@@ -149,7 +145,7 @@
           <a class="plate plate--icon" href="https://trustoo.nl/utrecht/utrecht/verhuisbedrijf/verhuisbedrijf-busje-komt-zo-/"><svg class="icon icon--brand" aria-hidden="true"><use href="assets/img/bcz-icons.svg#trustoo"></use></svg><b>9,6 <span class="plate__unit">/10</span></b><span>495+ reviews op Trustoo, Top Score 2022–2025</span></a>
         </div>
       </div>
-      <ul class="scroller review-grid" role="list" aria-label="Reviews van klanten" tabindex="0">
+      <ul class="scroller review-grid" data-carousel="review" role="list" aria-label="Reviews van klanten" tabindex="0">
         <li><figure class="review"><span class="stars" role="img" aria-label="5 van 5 sterren">★★★★★</span><blockquote><p>“Wat een topervaring bij Busje Komt Zo. Van de eerste offerte tot het monteren van de laatste kast was alles 10/10. Duidelijke communicatie, nette en zorgvuldige aanpak en een super service.”</p></blockquote><figcaption><svg class="icon icon--brand" aria-hidden="true"><use href="assets/img/bcz-icons.svg#google"></use></svg><span><b>Renier</b> via Google, september 2026</span></figcaption></figure></li>
         <li><figure class="review"><span class="stars" role="img" aria-label="5 van 5 sterren">★★★★★</span><blockquote><p>“Top verhuisbedrijf. Het was allemaal snel geregeld zonder dat ik allerlei vragenlijsten moest invullen. … Ik had echt veel spullen, maar heb nog nooit zo'n efficiënte en vlotte verhuizing gehad.”</p></blockquote><figcaption><svg class="icon icon--brand" aria-hidden="true"><use href="assets/img/bcz-icons.svg#google"></use></svg><span><b>David de Muinck Keizer</b> via Google, september 2026</span></figcaption></figure></li>
         <li><figure class="review"><span class="stars" role="img" aria-label="5 van 5 sterren">★★★★★</span><blockquote><p>“… Prima job, goeie gasten, deden voorzichtig met m’n spullen, geen schade, geen klachten. Uitladen op 2 adressen was geen probleem, ruim binnen de tijd klaar, zonder stress. Van harte aan te bevelen dus.”</p></blockquote><figcaption><svg class="icon icon--brand" aria-hidden="true"><use href="assets/img/bcz-icons.svg#trustoo"></use></svg><span><b>Klant via Trustoo</b>, uitgelichte review</span></figcaption></figure></li>

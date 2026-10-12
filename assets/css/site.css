@@ -597,3 +597,53 @@
   .hero h1 { text-wrap: pretty; }
   .plate b { white-space: nowrap; }
 }
+
+/* ===== 9. Original menu behaviour and phone carousels (2026-10-12) ===== */
+@layer sections {
+  /* Submenus: collapsed on phones, opened with the caret button */
+  .site-nav .has-sub { position: relative; display: flex; flex-wrap: wrap; align-items: center; }
+  .site-nav .has-sub > a { flex: 1; }
+  .nav-caret {
+    display: inline-grid; place-items: center; inline-size: var(--tap); block-size: var(--tap);
+    padding: 0; background: transparent; border: 0; border-radius: var(--radius-sm); color: var(--color-brand); cursor: pointer;
+  }
+  .nav-caret::before { content: ""; inline-size: 0.6rem; block-size: 0.6rem; border-inline-end: 2px solid currentColor; border-block-end: 2px solid currentColor; rotate: 45deg; translate: 0 -0.15rem; transition: rotate .15s; }
+  .nav-caret[aria-expanded="true"]::before { rotate: -135deg; translate: 0 0.15rem; }
+  .site-nav .has-sub > .sub { flex-basis: 100%; }
+  @media (max-width: 63.99rem) {
+    .site-nav .has-sub:not(.is-open) > .sub { display: none; }
+  }
+  @media (min-width: 64rem) {
+    .site-nav .has-sub { display: block; }
+    .nav-caret { display: none; }
+  }
+}
+
+@layer components {
+  /* Carousel controls under a swipe row (phones only) */
+  .carousel-nav { display: none; }
+  @media (max-width: 47.99rem) {
+    .carousel-nav { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); margin-block-start: var(--space-3); }
+    .carousel-nav__arrow {
+      display: grid; place-items: center; inline-size: var(--tap); block-size: var(--tap); padding: 0;
+      background: var(--color-surface); border: 2px solid var(--color-brand); border-radius: 50%;
+      color: var(--color-brand); font-size: 1.75rem; line-height: 1; cursor: pointer;
+    }
+    .carousel-nav__arrow:disabled { opacity: 0.35; cursor: default; }
+    .carousel-nav__dots { display: flex; gap: 2px; }
+    .carousel-nav__dot { display: grid; place-items: center; inline-size: 1.5rem; block-size: 1.5rem; padding: 0; background: none; border: 0; cursor: pointer; }
+    .carousel-nav__dot::before { content: ""; inline-size: 0.6rem; block-size: 0.6rem; border-radius: 50%; background: var(--petrol-300); transition: inline-size .15s; }
+    .carousel-nav__dot[aria-current]::before { inline-size: 1.4rem; border-radius: 99px; background: var(--color-brand); }
+  }
+}
+
+@layer utilities {
+  @media (max-width: 47.99rem) {
+    .scroller > * { flex: 0 0 88%; }
+    /* Photos: landscape crop on phones, so a photo never fills the whole screen */
+    .photo-row.scroller img { aspect-ratio: 4 / 3; block-size: auto; object-fit: cover; }
+    /* Reviews: equal-height cards */
+    .review-grid.scroller > li { display: flex; }
+    .review-grid.scroller .review { inline-size: 100%; }
+  }
+}

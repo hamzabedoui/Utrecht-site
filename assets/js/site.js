@@ -1,5 +1,7 @@
 // Busje komt zo · small progressive enhancements. The site works without this file.
 (() => {
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   // Mobile menu
   const toggle = document.querySelector('.nav-toggle');
   const nav = document.getElementById(toggle?.getAttribute('aria-controls') || '');
@@ -18,39 +20,62 @@
     });
   }
 
-  // Price estimate: uses the published packages on /tarieven/ (€35,70 per verhuizer per uur incl. btw).
-  const form = document.querySelector('[data-estimate]');
-  if (form) {
-    const RATE = 35.70;
-    const VEHICLE = { bus: 114.95, wagen: 151.25 };
-    // Hours per home type: [min, max]. Movers per home type. To be confirmed by Busje komt zo.
-    const HOMES = {
-      studio:   { hours: [4, 4], movers: 2 },
-      appartement: { hours: [5, 6], movers: 2 },
-      woning:   { hours: [6, 8], movers: 2 },
-      groot:    { hours: [6, 8], movers: 3 },
-    };
-    const out = form.querySelector('[data-estimate-out]');
-    const fmt = new Intl.NumberFormat('nl-NL', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 });
+  // Submenus (Diensten, Werkgebied): the caret button opens them on phones and by keyboard
+  document.querySelectorAll('.site-nav .nav-caret').forEach((caret) => {
+    caret.addEventListener('click', () => {
+      const item = caret.closest('.has-sub');
+      const open = caret.getAttribute('aria-expanded') !== 'true';
+      document.querySelectorAll('.site-nav .has-sub.is-open').forEach((other) => {
+        if (other !== item) { other.classList.remove('is-open'); other.querySelector('.nav-caret')?.setAttribute('aria-expanded', 'false'); }
+      });
+      item.classList.toggle('is-open', open);
+      caret.setAttribute('aria-expanded', String(open));
+    });
+  });
 
-    const update = () => {
-      const data = new FormData(form);
-      const home = HOMES[data.get('woning')];
-      if (!home) return;
-      const noLiftHigh = data.get('verdieping') === 'hoog' && data.get('lift') === 'nee';
-      const [lo, hi] = home.hours.map((h) => h + (noLiftHigh ? 1 : 0));
-      const vehicle = hi > 4 ? VEHICLE.wagen : VEHICLE.bus;
-      const vehicleLo = lo > 4 ? VEHICLE.wagen : VEHICLE.bus;
-      const min = lo * home.movers * RATE + vehicleLo;
-      const max = hi * home.movers * RATE + vehicle;
-      out.querySelector('b').textContent = min === max ? fmt.format(min) : `${fmt.format(min)} – ${fmt.format(max)}`;
-      out.querySelector('[data-estimate-detail]').textContent =
-        `${home.movers} verhuizers, ${lo === hi ? lo : `${lo} tot ${hi}`} uur, ${hi > 4 ? 'verhuiswagen' : 'bestelbus'}. Incl. btw, excl. reiskosten (€0,79 per km).`;
-      out.hidden = false;
+  // Carousels on phones: arrows, dots and a counter for swipe rows (.scroller[data-carousel])
+  document.querySelectorAll('.scroller[data-carousel]').forEach((track, n) => {
+    const items = [...track.children];
+    if (items.length < 2) return;
+    const noun = track.dataset.carousel || 'item';
+    const bar = document.createElement('div');
+    bar.className = 'carousel-nav';
+    const prev = Object.assign(document.createElement('button'), { type: 'button', className: 'carousel-nav__arrow', innerHTML: '<span aria-hidden="true">‹</span>' });
+    prev.setAttribute('aria-label', `Vorige ${noun}`);
+    const next = Object.assign(document.createElement('button'), { type: 'button', className: 'carousel-nav__arrow', innerHTML: '<span aria-hidden="true">›</span>' });
+    next.setAttribute('aria-label', `Volgende ${noun}`);
+    const dots = document.createElement('div');
+    dots.className = 'carousel-nav__dots';
+    const dotEls = items.map((_, i) => {
+      const d = Object.assign(document.createElement('button'), { type: 'button', className: 'carousel-nav__dot' });
+      d.setAttribute('aria-label', `${noun} ${i + 1} van ${items.length}`);
+      d.addEventListener('click', () => go(i));
+      dots.append(d);
+      return d;
+    });
+    bar.append(prev, dots, next);
+    track.after(bar);
+
+    let current = 0;
+    const go = (i) => {
+      current = Math.max(0, Math.min(items.length - 1, i));
+      track.scrollTo({ left: items[current].offsetLeft - items[0].offsetLeft, behavior: reduceMotion ? 'auto' : 'smooth' });
     };
-    form.addEventListener('change', update);
-    update();
-  }
+    const sync = () => {
+      const x = track.scrollLeft;
+      let best = 0;
+      items.forEach((el, i) => { if (Math.abs(el.offsetLeft - items[0].offsetLeft - x) < Math.abs(items[best].offsetLeft - items[0].offsetLeft - x)) best = i; });
+      current = best;
+      dotEls.forEach((d, i) => d.toggleAttribute('aria-current', i === best));
+      prev.disabled = best === 0;
+      next.disabled = best === items.length - 1;
+    };
+    let raf = 0;
+    track.addEventListener('scroll', () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(sync); }, { passive: true });
+    prev.addEventListener('click', () => go(current - 1));
+    next.addEventListener('click', () => go(current + 1));
+    sync();
+  });
 
   // Map: load the Google Maps iframe only when asked, so it never slows the page.
   document.querySelectorAll('[data-map-src]').forEach((btn) => {
