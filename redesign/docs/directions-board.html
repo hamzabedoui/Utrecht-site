@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Richtingen Busje komt zo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700;800&family=Atkinson+Hyperlegible+Next:wght@400;700&family=Big+Shoulders+Display:wght@800&family=Public+Sans:wght@400;600&display=swap">
+<style>
+  body { margin: 0; background: #e9ecee; color: #1d2a30; font: 15px/1.5 system-ui, sans-serif; }
+  .board { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 20px; max-width: 1500px; margin: auto; }
+  @media (max-width: 1000px) { .board { grid-template-columns: 1fr; padding: 16px; } }
+  .col { background: #fff; border-radius: 6px; overflow: hidden; }
+  .head { padding: 16px 18px 6px; }
+  .head h2 { margin: 0; font-size: 20px; }
+  .head p { margin: 4px 0 0; color: #55656c; font-size: 14px; }
+  .rec { display: inline-block; margin-left: 6px; padding: 1px 8px; border-radius: 99px; background: #1d6b45; color: #fff; font-size: 12px; vertical-align: middle; }
+  .sw { display: flex; padding: 12px 18px; gap: 6px; }
+  .sw div { flex: 1; height: 54px; border-radius: 4px; display: flex; align-items: flex-end; padding: 4px; font: 11px/1 ui-monospace, monospace; box-shadow: inset 0 0 0 1px rgba(0,0,0,.08); }
+  .type { padding: 4px 18px 14px; }
+  .mock { margin: 0 18px 18px; border-radius: 4px; overflow: hidden; box-shadow: 0 0 0 1px rgba(0,0,0,.08); }
+  .mock img { width: 100%; height: 150px; object-fit: cover; display: block; }
+  .btn { display: inline-block; padding: 10px 14px; border-radius: 4px; font-weight: 700; font-size: 14px; }
+
+  /* A */
+  .a .type h3 { font: 800 34px/1.05 Overpass, sans-serif; margin: 0 0 6px; color: #00303F; letter-spacing: -.01em; }
+  .a .type p { font: 400 17px/1.55 Overpass, sans-serif; margin: 0; color: #00303F; }
+  .a .mock { background: #F2F6F7; font-family: Overpass, sans-serif; color: #00303F; }
+  .a .inner { padding: 16px; display: grid; gap: 10px; border-left: 4px solid #EA8C14; margin: 14px; }
+  .a .inner strong { font-size: 22px; font-weight: 800; line-height: 1.1; }
+  .a .plates { display: flex; gap: 8px; flex-wrap: wrap; }
+  .a .plate { background: #004E66; color: #fff; padding: 8px 10px; border-radius: 4px; font-size: 13px; line-height: 1.25; }
+  .a .plate b { display: block; font-size: 19px; font-variant-numeric: tabular-nums; }
+  .a .btn { background: #EA8C14; color: #00303F; justify-self: start; }
+
+  /* B */
+  .b .type h3 { font: 700 30px/1.15 "Atkinson Hyperlegible Next", sans-serif; margin: 0 0 6px; color: #0E3A48; }
+  .b .type p { font: 400 19px/1.6 "Atkinson Hyperlegible Next", sans-serif; margin: 0; color: #0E3A48; }
+  .b .mock { background: #fff; font-family: "Atkinson Hyperlegible Next", sans-serif; color: #0E3A48; }
+  .b .inner { padding: 18px; display: grid; gap: 12px; text-align: left; }
+  .b .inner strong { font-size: 22px; line-height: 1.2; }
+  .b .checks { margin: 0; padding: 0; list-style: none; font-size: 16px; }
+  .b .checks li::before { content: "✓"; color: #2F7A57; font-weight: 700; margin-right: 8px; }
+  .b .btn { background: #EA8C14; color: #0E3A48; justify-self: start; font-size: 16px; padding: 12px 16px; }
+  .b .mist { background: #EEF5F6; padding: 10px 18px; font-size: 15px; }
+
+  /* C */
+  .c .type { background: #00384A; padding-top: 14px; }
+  .c .type h3 { font: 800 46px/.95 "Big Shoulders Display", sans-serif; margin: 0 0 8px; color: #fff; text-transform: none; }
+  .c .type p { font: 400 17px/1.55 "Public Sans", sans-serif; margin: 0; color: #E6F1F3; }
+  .c .mock { background: #00384A; color: #fff; font-family: "Public Sans", sans-serif; }
+  .c .inner { padding: 16px; display: grid; gap: 10px; }
+  .c .inner strong { font: 800 40px/.95 "Big Shoulders Display", sans-serif; }
+  .c .price { color: #F0901A; font-weight: 600; font-size: 18px; }
+  .c .stripe { height: 10px; background: repeating-linear-gradient(90deg, #F0901A 0 60%, transparent 60% 64%, #F0901A 64% 80%, transparent 80% 84%, #F0901A 84% 92%, transparent 92% 100%); }
+  .c .btn { background: #F0901A; color: #0B2630; justify-self: start; }
+  .c .ijs { background: #E6F1F3; color: #00384A; padding: 10px 16px; font-size: 14px; font-weight: 600; }
+</style>
+</head>
+<body>
+<main class="board">
+
+  <section class="col a" aria-label="Richting A">
+    <div class="head"><h2>A · Op route <span class="rec">aanbevolen</span></h2><p>Helder, snel, transparant. Signalisatie en de belettering van uw bus.</p></div>
+    <div class="sw">
+      <div style="background:#F2F6F7">F2F6F7</div><div style="background:#00303F;color:#fff">00303F</div><div style="background:#004E66;color:#fff">004E66</div><div style="background:#EA8C14">EA8C14</div><div style="background:#5A6E75;color:#fff">5A6E75</div>
+    </div>
+    <div class="type"><h3>Verhuisbedrijf Utrecht met een vaste prijs</h3><p>Overpass 800 / 400. Body 18 px. Gebaseerd op een verkeersbordletter.</p></div>
+    <div class="mock">
+      <img src="../../assets/real-hero-truck-utrecht.webp" alt="Verhuiswagen van Busje komt zo in een straat in Utrecht">
+      <div class="inner">
+        <strong>Verhuizen in Utrecht, met de prijs vooraf</strong>
+        <div class="plates"><span class="plate"><b>€35,70</b>per verhuizer per uur, incl. btw</span><span class="plate"><b>4,9 ★</b>162 Google-reviews</span></div>
+        <span class="btn">Bereken uw prijs</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="col b" aria-label="Richting B">
+    <div class="head"><h2>B · Rustig geregeld</h2><p>Rustig, leesbaar, persoonlijk. Voor wie verhuizen spannend vindt.</p></div>
+    <div class="sw">
+      <div style="background:#FFFFFF">FFFFFF</div><div style="background:#EEF5F6">EEF5F6</div><div style="background:#0E3A48;color:#fff">0E3A48</div><div style="background:#EA8C14">EA8C14</div><div style="background:#2F7A57;color:#fff">2F7A57</div>
+    </div>
+    <div class="type"><h3>Wij nemen uw verhuizing uit handen</h3><p>Atkinson Hyperlegible Next 700 / 400. Body 19 px.</p></div>
+    <div class="mock">
+      <img src="../../assets/real-moving-lift-team.webp" alt="Het team van Busje komt zo bij de verhuislift">
+      <div class="inner">
+        <strong>Een familiebedrijf dat met u meedenkt</strong>
+        <ul class="checks"><li>Gratis opname bij u thuis</li><li>Vaste prijs, geen verrassingen</li><li>Geen weekendtoeslag</li></ul>
+        <span class="btn">Plan een gratis opname</span>
+      </div>
+      <div class="mist">4,9 op Google · 162 reviews</div>
+    </div>
+  </section>
+
+  <section class="col c" aria-label="Richting C">
+    <div class="head"><h2>C · Livrei</h2><p>Groot en herkenbaar, zoals de zijkant van uw bus.</p></div>
+    <div class="sw">
+      <div style="background:#00384A;color:#fff">00384A</div><div style="background:#00506B;color:#fff">00506B</div><div style="background:#F0901A">F0901A</div><div style="background:#0B2630;color:#fff">0B2630</div><div style="background:#E6F1F3">E6F1F3</div>
+    </div>
+    <div class="type"><h3>Verhuisbedrijf Utrecht</h3><p>Big Shoulders Display 800 + Public Sans 400. Body 18 px.</p></div>
+    <div class="mock">
+      <div class="stripe"></div>
+      <img src="../../assets/real-moving-lift-overview.webp" alt="Verhuislift van Busje komt zo in gebruik">
+      <div class="inner">
+        <strong>Morgen verhuizen? Wij rijden.</strong>
+        <span class="price">€35,70 per verhuizer per uur · 4,9 ★ Google</span>
+        <span class="btn">Offerte in 2 minuten</span>
+      </div>
+      <div class="ijs">Geen weekendtoeslag · geen voorrijkosten in Utrecht · eigen verhuislift</div>
+    </div>
+  </section>
+
+</main>
+</body>
+</html>

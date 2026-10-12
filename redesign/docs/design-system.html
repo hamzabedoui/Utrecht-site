@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Designsysteem | Busje komt zo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<style>
+  /* Reference-page only helpers, not part of the site */
+  .ds-swatches { display: grid; gap: var(--space-3); grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr)); }
+  .ds-swatch { border-radius: var(--radius-sm); overflow: hidden; background: var(--white); border: var(--border); font-size: var(--step--1); }
+  .ds-swatch div { block-size: 4.5rem; }
+  .ds-swatch p { padding: var(--space-2) var(--space-3); line-height: 1.35; }
+  .ds-label { font-size: var(--step--1); color: var(--color-text-soft); margin-block-end: var(--space-2); }
+  .ds-block { display: grid; gap: var(--space-5); }
+  .ds-space { display: flex; align-items: end; gap: var(--space-3); flex-wrap: wrap; }
+  .ds-space span { display: block; background: var(--color-brand); block-size: 1rem; }
+  .ds-frame { border: 2px dashed var(--color-line); border-radius: var(--radius-md); overflow: hidden; }
+  .ds-frame .action-bar { position: static; }
+  .ds-table { border-collapse: collapse; inline-size: 100%; font-size: var(--step--1); background: var(--white); }
+  .ds-table :is(th, td) { text-align: start; padding: var(--space-2) var(--space-3); border-block-end: var(--border); vertical-align: top; }
+</style>
+</head>
+<body>
+<a class="skip-link visually-hidden" href="#content">Direct naar de inhoud</a>
+
+<header class="site-header">
+  <div class="wrap site-header__bar">
+    <a class="brand" href="../../index.html" aria-label="Busje komt zo, naar de homepage"><img src="../../assets/img/busje-komtzo-logo-small.webp" width="320" height="84" alt="Busje komt zo verhuisbedrijf"></a>
+  <nav class="site-nav" id="site-nav" aria-label="Hoofdmenu">
+      <ul>
+        <li><a href="#">Verhuisbedrijf Utrecht</a></li>
+        <li class="has-sub"><a href="#">Diensten</a>
+          <ul class="sub"><li><a href="#">Particulier verhuizen</a></li><li><a href="#">Verhuislift huren</a></li><li><a href="#">Woningontruiming</a></li></ul>
+        </li>
+        <li><a href="#" aria-current="page">Tarieven</a></li>
+        <li><a href="#">Werkgebied</a></li>
+        <li><a href="#">Reviews</a></li>
+      </ul>
+    </nav>
+    <a class="header-call" href="tel:+31850508282"><svg class="icon" aria-hidden="true"><use href="../../assets/img/bcz-icons.svg#phone"></use></svg>085 050 8282</a>
+    <a class="btn btn--primary header-cta" href="#">Offerte aanvragen</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="nav-toggle__bars" aria-hidden="true"></span>Menu</button>
+  </div>
+</header>
+
+<main id="content" tabindex="-1">
+  <section class="section">
+    <div class="wrap flow" style="--flow: var(--space-4)">
+      <h1>Designsysteem: Op route</h1>
+      <p class="lead measure">Live referentie voor de nieuwe site. Alles op deze pagina komt uit <code>assets/css/site.css</code>; wat u hier ziet, is wat de pagina's gebruiken.</p>
+    </div>
+  </section>
+
+  <section class="section section--surface">
+    <div class="wrap ds-block">
+      <h2>Kleuren</h2>
+      <div class="ds-swatches">
+        <div class="ds-swatch"><div style="background:#f2f6f7"></div><p><b>Krijt</b> #F2F6F7<br>paginagrond</p></div>
+        <div class="ds-swatch"><div style="background:#ffffff"></div><p><b>Wit</b> #FFFFFF<br>kaarten, formulieren</p></div>
+        <div class="ds-swatch"><div style="background:#00303f"></div><p><b>Diep petrol</b> #00303F<br>tekst 12,9:1</p></div>
+        <div class="ds-swatch"><div style="background:#004e66"></div><p><b>Petrol</b> #004E66<br>links, borden 8,5:1</p></div>
+        <div class="ds-swatch"><div style="background:#ea8c14"></div><p><b>Signaal-oranje</b> #EA8C14<br>actie, route. Nooit als tekst</p></div>
+        <div class="ds-swatch"><div style="background:#5a6e75"></div><p><b>Leisteen</b> #5A6E75<br>bijtekst 4,9:1</p></div>
+        <div class="ds-swatch"><div style="background:#7a8c92"></div><p><b>Rand</b> #7A8C92<br>invoervelden 3,5:1</p></div>
+        <div class="ds-swatch"><div style="background:#2f7a57"></div><p><b>Groen</b> #2F7A57<br>inbegrepen 5,2:1</p></div>
+        <div class="ds-swatch"><div style="background:#b42318"></div><p><b>Rood</b> #B42318<br>foutmelding 6,6:1</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap ds-block">
+      <h2>Typografie</h2>
+      <p class="ds-label">Overpass, één familie. Body 18 px, regelafstand 1,6, maximaal 66 tekens per regel.</p>
+      <div class="flow">
+        <p class="ds-label">H1 · 36–60 px · 800</p><p style="font-size:var(--step-4);font-weight:800;line-height:1.1">Verhuisbedrijf Utrecht</p>
+        <p class="ds-label">H2 · 30–40 px · 800</p><p style="font-size:var(--step-3);font-weight:800;line-height:1.1">Zo verloopt uw verhuizing</p>
+        <p class="ds-label">H3 · 24–28 px · 700</p><p style="font-size:var(--step-2);font-weight:700;line-height:1.1">Verhuislift huren</p>
+        <p class="ds-label">Lead · 20–22 px</p><p class="lead measure">Wij komen langs, bekijken uw inboedel en spreken vooraf een vaste prijs af.</p>
+        <p class="ds-label">Body · 18 px</p><p class="measure">U betaalt €35,70 per verhuizer per uur, inclusief btw. Ook op zaterdag en zondag, zonder weekendtoeslag. Binnen Utrecht rekenen we geen voorrijkosten.</p>
+        <p class="ds-label">Klein · 15 px</p><p style="font-size:var(--step--1)">Prijzen inclusief 21% btw, exclusief reiskosten (€0,79 per km).</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--surface">
+    <div class="wrap ds-block">
+      <h2>Ruimte en vorm</h2>
+      <div class="ds-space" aria-hidden="true">
+        <span style="inline-size:var(--space-1)"></span><span style="inline-size:var(--space-2)"></span><span style="inline-size:var(--space-3)"></span><span style="inline-size:var(--space-4)"></span><span style="inline-size:var(--space-5)"></span><span style="inline-size:var(--space-6)"></span><span style="inline-size:var(--space-7)"></span><span style="inline-size:var(--space-8)"></span><span style="inline-size:var(--space-9)"></span>
+      </div>
+      <p class="ds-label">4, 8, 12, 16, 24, 32, 48, 64, 96 px. Radius 4 px (borden, velden), 6 px (knoppen), 8 px (kaarten). Schaduw alleen op wat zweeft (actiebalk, uitklapmenu).</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap ds-block">
+      <h2>Knoppen en borden</h2>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="#">Bereken uw prijs</a>
+        <a class="btn btn--secondary" href="tel:+31850508282"><svg class="icon" aria-hidden="true"><use href="../../assets/img/bcz-icons.svg#phone"></use></svg>Bel 085 050 8282</a>
+        <a class="btn btn--secondary" href="https://wa.me/31634755656"><svg class="icon" aria-hidden="true"><use href="../../assets/img/bcz-icons.svg#whatsapp"></use></svg>WhatsApp</a>
+      </div>
+      <p class="ds-label">Eén primaire knop per scherm. Minimaal 48 px hoog. Altijd tekst, nooit alleen een icoon.</p>
+      <div class="plates">
+        <span class="plate"><b>€35,70</b>per verhuizer per uur, incl. btw</span>
+        <a class="plate" href="#"><b>4,9 ★</b>162 Google-reviews</a>
+        <span class="plate"><b>€0</b>weekendtoeslag</span>
+      </div>
+      <p class="ds-label">Borden: de harde feiten. Petrol met een witte binnenrand, zoals een Nederlands informatiebord.</p>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="wrap ds-block">
+      <h2>Op donker</h2>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="#">Offerte aanvragen</a>
+        <a class="btn btn--secondary" href="#">Bel 085 050 8282</a>
+      </div>
+      <ul class="ticks"><li>Gratis opname bij u thuis</li><li>Vaste prijs vooraf</li><li>Geen weekendtoeslag</li></ul>
+      <p class="soft">De focusring wordt oranje op donker (5,5:1).</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap ds-block">
+      <h2>Formulieren</h2>
+      <form class="form-grid form-grid--2" onsubmit="return false" style="max-inline-size:44rem">
+        <div class="field"><label for="ds-van">Van (postcode)</label><span class="hint" id="ds-van-h">Bijvoorbeeld 3511 AB</span><input class="input" id="ds-van" name="van" autocomplete="postal-code" aria-describedby="ds-van-h" required pattern="[0-9]{4}\s?[A-Za-z]{2}"><span class="error">Vul een postcode in, bijvoorbeeld 3511 AB.</span></div>
+        <div class="field"><label for="ds-datum">Gewenste datum</label><span class="hint" id="ds-datum-h">Weet u het nog niet? Laat leeg.</span><input class="input" id="ds-datum" name="datum" type="date" aria-describedby="ds-datum-h"></div>
+        <fieldset class="choices" style="grid-column:1/-1"><legend>Type woning</legend><div class="choices__row">
+          <label class="choice"><input type="radio" name="w" value="1" checked><span>Studio of kamer</span></label>
+          <label class="choice"><input type="radio" name="w" value="2"><span>Appartement</span></label>
+          <label class="choice"><input type="radio" name="w" value="3"><span>Eengezinswoning</span></label>
+        </div></fieldset>
+        <div><button class="btn btn--primary" type="submit">Offerte aanvragen</button></div>
+      </form>
+      <p class="ds-label">Label boven het veld, hint daaronder en gekoppeld met aria-describedby, foutmelding pas na interactie (:user-invalid). Nooit een placeholder als label.</p>
+    </div>
+  </section>
+
+  <section class="section section--surface">
+    <div class="wrap ds-block">
+      <h2>Kaarten, review, stappen</h2>
+      <div class="grid">
+        <article class="card"><h3><a class="card__link" href="#">Particulier verhuizen</a></h3><p>Appartement of woning, wij dragen, rijden en plaatsen.</p><p class="card__price">vanaf €71,40 per uur</p></article>
+        <article class="card"><h3><a class="card__link" href="#">Verhuislift huren</a></h3><p>Met ervaren bediening, voor smalle trappen en hoge etages.</p><p class="card__price">prijs vooraf afgestemd</p></article>
+        <figure class="review"><blockquote><p>“Binnen een paar uur stond alles in ons nieuwe huis. Netjes en vriendelijk.”</p></blockquote><figcaption><b>Voorbeeldnaam</b>, Lombok · <span class="stars" aria-label="5 van 5 sterren">★★★★★</span> · Google</figcaption></figure>
+      </div>
+      <ol class="steps">
+        <li><div><h3>Opname</h3><p>We bekijken uw inboedel, thuis of via video.</p></div></li>
+        <li><div><h3>Vaste prijs</h3><p>U krijgt vooraf één bedrag.</p></div></li>
+        <li><div><h3>Verhuisdag</h3><p>Wij dragen, rijden en plaatsen.</p></div></li>
+        <li><div><h3>Nazorg</h3><p>We nemen het verpakkingsmateriaal mee.</p></div></li>
+      </ol>
+      <details class="faq"><summary>Rekenen jullie een weekendtoeslag?</summary><p>Nee. Ook op zaterdag en zondag geldt hetzelfde tarief.</p></details>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap ds-block">
+      <h2>CTA-blokken</h2>
+      <div class="cta-band"><div class="flow" style="--flow:var(--space-1)"><p>Morgen al verhuizen?</p><p class="soft">Bel of app, dan hoort u direct wat er nog kan.</p></div><div class="btn-row"><a class="btn btn--primary" href="#">Bel 085 050 8282</a></div></div>
+      <p class="ds-label">Mobiele actiebalk (vast onderaan op telefoons, verborgen vanaf 1024 px):</p>
+      <div class="ds-frame" style="max-inline-size:390px">
+        <div class="action-bar">
+          <a class="btn btn--secondary" href="tel:+31850508282"><svg class="icon" aria-hidden="true"><use href="../../assets/img/bcz-icons.svg#phone"></use></svg>Bel</a>
+          <a class="btn btn--secondary" href="https://wa.me/31634755656"><svg class="icon" aria-hidden="true"><use href="../../assets/img/bcz-icons.svg#whatsapp"></use></svg>WhatsApp</a>
+          <a class="btn btn--primary" href="#">Offerte</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-title">Verhuisbedrijf Busje komt zo</p>
+        <address>De Brauwlaan 4<br>3526 XS Utrecht<br><a href="tel:+31850508282">085 050 8282</a><br><a href="mailto:info@busje-komtzo.nl">info@busje-komtzo.nl</a></address>
+      </div>
+      <div><p class="footer-title">Openingstijden</p><dl class="hours"><dt>Ma t/m zo</dt><dd>07:00–22:00</dd></dl></div>
+      <div><p class="footer-title">Diensten</p><ul class="footer-list"><li><a href="#">Particulier verhuizen</a></li><li><a href="#">Verhuislift huren</a></li></ul></div>
+      <div><p class="footer-title">Werkgebied</p><ul class="footer-list"><li><a href="#">Verhuisbedrijf Utrecht</a></li><li><a href="#">Nieuwegein</a></li></ul></div>
+    </div>
+    <div class="legal"><span>KvK 97184004</span><a href="#">Privacyverklaring</a><a href="#">Algemene voorwaarden</a></div>
+  </div>
+</footer>
+<script src="../../assets/js/site.js" defer></script>
+</body>
+</html>
