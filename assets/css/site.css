@@ -455,3 +455,94 @@
     .plate, .estimate-out, .btn { border: 2px solid CanvasText; }
   }
 }
+
+/* ===== 7. Icons and responsive refinements (2026-10-12) ============== */
+@layer components {
+  /* Icon list: an icon in a soft petrol disc next to short text */
+  .icon-list { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--space-3); }
+  .icon-list li { display: grid; grid-template-columns: 2.25rem 1fr; gap: var(--space-3); align-items: center; }
+  .icon-list li > .icon { inline-size: 2.25rem; block-size: 2.25rem; padding: 0.45rem; border-radius: 50%; background: var(--petrol-100); color: var(--color-brand); }
+  .icon-list b { display: block; }
+  .icon-list--inline { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-5); }
+  .icon-list--inline li { grid-template-columns: 1.25rem auto; gap: var(--space-2); }
+  .icon-list--inline li > .icon { inline-size: 1.25rem; block-size: 1.25rem; padding: 0; background: none; }
+  .icon-list--grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr)); gap: var(--space-4); }
+  .section--dark .icon-list li > .icon, .site-footer .icon-list li > .icon { background: rgb(255 255 255 / 0.1); color: var(--orange-500); }
+
+  /* Plate with a logo (Google, Trustoo) */
+  .plate--icon { grid-template-columns: auto 1fr; column-gap: var(--space-2); align-items: center; }
+  .icon--brand { stroke: none; }
+  .plate--icon .icon--brand { grid-row: 1; inline-size: 1.75rem; block-size: 1.75rem; padding: 4px; background: var(--white); border-radius: 50%; }
+  .plate--icon b { grid-row: 1; }
+  .plate--icon > span:last-child { grid-column: 1 / -1; }
+
+  /* Logos and icons inside buttons */
+  .btn .icon--brand { inline-size: 1.25rem; block-size: 1.25rem; }
+
+  /* Horizontal card on small screens: icon left, text right */
+  .card--row { grid-template-columns: 2.75rem 1fr; column-gap: var(--space-4); row-gap: var(--space-1); padding: var(--space-4); }
+  .card--row .card__icon { grid-row: span 2; inline-size: 2.75rem; block-size: 2.75rem; padding: 0.6rem; border-radius: var(--radius-md); background: var(--petrol-100); }
+  .card--row h3 { font-size: var(--step-1); align-self: end; }
+  .card--row p { font-size: var(--step--1); line-height: 1.5; }
+  @media (min-width: 64rem) {
+    .card--row { grid-template-columns: 1fr; padding: var(--space-5); }
+    .card--row .card__icon { grid-row: auto; }
+    .card--row h3 { font-size: var(--step-2); }
+    .card--row p { font-size: var(--step-0); line-height: var(--leading-body); }
+  }
+  .grid--services { grid-template-columns: 1fr; gap: var(--space-3); }
+  @media (min-width: 36rem) { .grid--services { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 64rem) { .grid--services { grid-template-columns: repeat(4, 1fr); gap: var(--space-4); } }
+
+  /* Review details */
+  .review .stars { color: var(--orange-500); font-size: var(--step-1); letter-spacing: 2px; line-height: 1; }
+  .review figcaption { display: flex; align-items: center; gap: var(--space-2); }
+  .review figcaption .icon--brand { flex: none; inline-size: 1.125rem; block-size: 1.125rem; }
+
+  /* Photo caption with icon */
+  .photo figcaption { display: flex; gap: var(--space-2); align-items: flex-start; }
+  .photo figcaption .icon { color: var(--color-brand); margin-block-start: 0.1em; }
+
+  /* Icon inside a CTA band heading */
+  .cta-band p:first-child .icon { color: var(--color-brand); vertical-align: -0.2em; }
+}
+
+@layer sections {
+  /* Service card icon box (sections layer, so it wins over the base card icon size) */
+  .card--row .card__icon { inline-size: 2.75rem; block-size: 2.75rem; padding: 0.55rem; }
+
+  /* Routes with an icon disc instead of a rule */
+  .routes li { grid-template-columns: 3rem 1fr; gap: var(--space-4); padding-inline-start: 0; border-inline-start: 0; }
+  .routes__icon { inline-size: 3rem; block-size: 3rem; padding: 0.7rem; border-radius: 50%; background: var(--color-brand); color: var(--white); }
+  .routes li > div { display: grid; gap: var(--space-2); }
+
+  /* Hero actions: full-width buttons on phones */
+  @media (max-width: 35.99rem) {
+    .hero__actions .btn { flex: 1 1 100%; }
+    .plates .plate { flex-basis: 8rem; }
+  }
+  .hero__note { color: var(--color-text-soft); }
+
+  /* Footer: link columns side by side on phones */
+  .footer-contact a { min-block-size: 2.75rem; display: inline-flex; align-items: center; }
+  @media (min-width: 24rem) and (max-width: 47.99rem) {
+    .footer-grid { grid-template-columns: 1fr 1fr; column-gap: var(--space-5); }
+    .footer-grid > :first-child { grid-column: 1 / -1; }
+  }
+}
+
+@layer utilities {
+  /* Scroller: swipe on phones, grid on larger screens */
+  @media (max-width: 47.99rem) {
+    .scroller {
+      display: flex; gap: var(--space-3); overflow-x: auto; overscroll-behavior-x: contain;
+      scroll-snap-type: x mandatory; scroll-padding-inline: var(--gutter);
+      margin-inline: calc(var(--gutter) * -1); padding: var(--space-1) var(--gutter) var(--space-3);
+      scrollbar-width: none;
+    }
+    .scroller::-webkit-scrollbar { display: none; }
+    .scroller > * { flex: 0 0 82%; scroll-snap-align: start; }
+    .scroller:focus-visible { outline: 3px solid var(--focus-ring); outline-offset: 2px; }
+  }
+
+}

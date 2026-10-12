@@ -126,3 +126,18 @@ Checked against the current site copy and the logo with the marketing brand-revi
 | Link grid | `ul.link-grid` | Columns of plain links with descriptive anchors (places, related pages). Used for hub-and-spoke links, not as navigation. |
 
 **Ticks list rule**: each `<li>` in `ul.ticks` must contain plain text or **one** wrapping element (`<li><span><strong>Kop.</strong> tekst</span></li>`). The tick is a grid column, so loose mixed content breaks the layout.
+
+## 12. Icons and responsive components (2026-10-12, Hamza's feedback)
+**Copy rule (Hamza)**: the homepage keeps its original keyword copy and does **not** lead with prices or cost calculations; clients find that off-putting. Price details live on `/tarieven/` and the price guide. Proof (Google 4,9, Trustoo 9,6, reviews) stays prominent.
+
+| Component | Class | Rules |
+|---|---|---|
+| Icon list | `ul.icon-list` (`--inline`, `--grid`) | Icon in a soft petrol disc + short text (`<b>` for a short heading). Inline variant for small notes under buttons; grid variant for 2–4 key facts. On dark sections the disc turns translucent with an orange icon. |
+| Brand icons | `svg.icon.icon--brand` with `#google`, `#trustoo` | Full-colour marks from the sprite (no stroke). Used in rating plates, review captions and review buttons. |
+| Logo plate | `.plate.plate--icon` | A rating plate with the brand mark on a white disc. |
+| Row card | `.card.card--row` inside `.grid.grid--services` | Phones: icon left, title and text right, compact. 2 columns from 576 px, 4 columns with stacked layout from 1024 px. |
+| Scroller | `.scroller` (on `.photo-row`, `.review-grid`) | Below 768 px: a horizontal swipe row with scroll-snap, cards at 82% width so the next one peeks in, `tabindex="0"` and an `aria-label` for keyboard users. From 768 px it falls back to the normal grid. |
+| Route item | `ul.routes > li` | Icon disc (petrol, white icon) beside the heading, text and link. |
+| Footer contact | `ul.icon-list.footer-contact` inside `<address>` | Address, phone, WhatsApp, e-mail and hours, each with an icon. |
+
+Tested at 320, 360, 390, 414, 768, 1024, 1280 and 1440 px: no horizontal scrolling, no tap target under 44 px outside running text, axe clean.
