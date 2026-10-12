@@ -1,0 +1,81 @@
+﻿Cluster;Keyword;Volume/mo NL (measured);KD 0-100 (measured);CPC EUR (measured);Intent (measured);Our organic pos - national (measured);Our Maps pos - national (measured);Utrecht mobile: our organic;Utrecht mobile: our Maps;Utrecht mobile: organic #1;Current live page;Target page (redesign);Priority;Quick win;Better for;Notes
+C1 Verhuisbedrijf Utrecht;verhuisbedrijf utrecht;1000;18;14.76;commercial;#21;#4;#10 (/verhuisbedrijf-utrecht/);#3;verhuisbedrijfdraagkracht.nl;/ and /verhuisbedrijf-utrecht/;/verhuisbedrijf-utrecht/ (see note);P1;;Both;"Maps #3 locally; organic #10 locally but #21 nationally. /verhuisbedrijf-utrecht/ is the ranking URL -> keep it as head-term page (REVERSES audit O3)"
+C1 Verhuisbedrijf Utrecht;verhuisbedrijf;5400;39;11.01;commercial;-;-;not top 20;#2;verhuisbedrijfutrecht.nl;/ (via GBP);GBP + /;P1;;Paid;"5,400/mo, CPC EUR 11. Maps #2 from Utrecht. 4 ads above organic. Win via GBP; ads geo-targeted"
+C1 Verhuisbedrijf Utrecht;verhuizers utrecht;140;0;17.03;navigational;#6;-;#11 (/verhuisbedrijf-utrecht/);#4;utrechtverhuisbedrijf.com;/verhuisbedrijf-utrecht/;/verhuisbedrijf-utrecht/;P1;YES;Both;"CPC EUR 17 = highest-value term. Organic #6 national / #11 local; Maps #4"
+C1 Verhuisbedrijf Utrecht;verhuizer utrecht;140;0;17.03;navigational;-;-;;;;/verhuisbedrijf-utrecht/;/verhuisbedrijf-utrecht/;P1;YES;Both;Same SERP as 'verhuizers utrecht'
+C1 Verhuisbedrijf Utrecht;verhuisservice utrecht;110;23;18.36;commercial;-;-;;;;-;/verhuisbedrijf-utrecht/;P2;;Both;Use 'verhuisservice' in H2
+C1 Verhuisbedrijf Utrecht;verhuizers;1300;42;n/a;commercial;-;-;;;;-;GBP;P2;;Paid;VBU Maps #1. Proximity term
+C1 Verhuisbedrijf Utrecht;verhuisservice;1300;36;n/a;commercial;-;-;;;;-;GBP;P3;;Paid;
+C1 Verhuisbedrijf Utrecht;verhuisbedrijf offerte;140;19;25.63;commercial;-;#10;;;;/offerteaanvraag/ (Maps #10);/offerteaanvraag/;P1;;Paid;"CPC EUR 25.63 - most expensive click; strongest buying intent"
+C1 Verhuisbedrijf Utrecht;verhuisofferte;50;36;9.69;commercial;-;-;;;;-;/offerteaanvraag/;P2;;Paid;
+C1 Verhuisbedrijf Utrecht;goedkoop verhuisbedrijf;320;28;10.22;commercial;-;-;;;;-;/tarieven/;P2;;Both;You publish EUR 35.70/hr incl. btw vs competitors' EUR 52.50 -> real price angle
+C1 Verhuisbedrijf Utrecht;goedkoop verhuizen utrecht;10;48;14.47;transactional;-;-;;;;-;/tarieven/;P3;;Paid;Only 10/mo
+C1 Verhuisbedrijf Utrecht;erkende verhuizers utrecht;70;26;4.56;navigational;-;-;;;;-;/;P3;;SEO;Only if member
+C1 Verhuisbedrijf Utrecht;verhuisbedrijf in de buurt;40;n/a;4.68;commercial;-;-;;;;-;GBP;P2;;Paid;Measured only 40/mo (Google groups 'in de buurt' into the head term)
+C1 Verhuisbedrijf Utrecht;verhuisbedrijf utrecht reviews;20;n/a;5.9;informational;-;-;;;;-;/beoordelingen/;P3;;SEO;
+C2 Verhuizen in Utrecht;verhuizen utrecht;260;21;16.04;navigational;#9;#3;#10 (/);#1;loket.digitaal.utrecht.nl;/ (organic #9-10);/ ;P1;;SEO;Maps #1 + organic #10 locally. utrecht.nl is #1 (gemeente intent)
+C2 Verhuizen in Utrecht;verhuizen naar utrecht;110;17;7.67;informational;#12;-;;;;/ (#12);/verhuisbedrijf-utrecht/;P2;;SEO;KD 17, low competition (0.33)
+C2 Verhuizen in Utrecht;verhuizing doorgeven utrecht;1000;25;0.88;navigational;-;-;;;;-;checklist (link to utrecht.nl);P3;;SEO;1,000/mo but CPC EUR 0.88 = no buyer value. VBU ranks #2 with /adreswijziging-doorgeven/ - awareness only
+C2 Verhuizen in Utrecht;verhuizen utrecht gemeente;480;1;n/a;navigational;-;-;;;;-;checklist;P3;;SEO;"480/mo; informational"
+C2 Verhuizen in Utrecht;verhuizen utrecht binnenstad;20;48;n/a;navigational;-;-;;;;-;/verhuisbedrijf-utrecht/#binnenstad;P2;;SEO;20/mo - small but zero-emissiezone angle is unique
+C3 Kosten & tarieven;wat kost een verhuisbedrijf;1300;0;3.7;commercial;-;-;not top 20;no pack;groeneveldverhuizingen.nl (+ AI Overview);-;prijsgids;P1;YES;SEO;1,300/mo, KD 0 but SERP has AI Overview + PAA. SVS ranks #3 with /wat-kost-een-verhuizing/
+C3 Kosten & tarieven;verhuisbedrijf kosten;1000;0;5.0;commercial;-;-;;;;-;/tarieven/;P1;YES;SEO;1,000/mo, KD 0. SVS #1, VBU #7
+C3 Kosten & tarieven;wat kost verhuizen;880;0;3.6;informational;-;-;;;;-;prijsgids;P1;YES;SEO;880/mo, KD 0
+C3 Kosten & tarieven;verhuizen kosten;590;0;4.55;informational;-;-;;;;-;prijsgids;P2;;SEO;590/mo, KD 0
+C3 Kosten & tarieven;wat kost een verhuizer per uur;50;22;2.29;commercial;-;-;;;;-;/tarieven/;P1;;SEO;"50/mo; competitors quote EUR 52.50/hr"
+C3 Kosten & tarieven;wat kost een verhuisbedrijf per uur;10;n/a;3.03;commercial;-;-;;;;-;/tarieven/;P2;;SEO;10/mo (lower than estimated)
+C3 Kosten & tarieven;wat kost verhuizen per m3;30;5;2.56;informational;-;-;;;;-;prijsgids + /m3-calculator/;P3;;SEO;
+C3 Kosten & tarieven;verhuisbedrijf utrecht kosten;10;51;11.88;commercial;-;-;;;;-;/tarieven/;P3;;Both;10/mo, KD 51
+C4 Verhuislift;verhuislift huren;4400;23;3.4;transactional;-;-;not top 20;#2;studentverhuisservice.nl;-;/verhuislift-huren/;P1;;Both;4,400/mo, KD 23. Maps #2 locally. SVS #1 ('vanaf EUR 72'), verhuislifthurenutrecht.nl #2 ('EUR 99/uur'). Add a price!
+C4 Verhuislift;verhuislift;4400;23;4.29;transactional;-;-;;;;-;/verhuislift-huren/;P1;;Both;Same SERP family as above
+C4 Verhuislift;verhuislift huren utrecht;320;11;4.81;transactional;#38;#3;;;;post /verhuislift-utrecht/ (#38), Maps #3;/verhuislift-huren/;P1;;Both;320/mo. Ranking URL today is the BLOG POST - 301 it into /verhuislift-huren/ only after the new page is live
+C4 Verhuislift;verhuislift utrecht;140;12;5.99;navigational;#17;-;;;;post /verhuislift-utrecht/ (#17);/verhuislift-huren/;P1;;Both;verhuislifthurenutrecht.nl #1
+C4 Verhuislift;verhuislift kosten;50;20;2.0;commercial;-;-;;;;-;/verhuislift-huren/;P2;;SEO;
+C4 Verhuislift;verhuislift huren kosten;30;n/a;1.14;transactional;-;-;;;;-;/verhuislift-huren/;P2;;SEO;
+C4 Verhuislift;verhuislift huren boels;480;0;1.44;transactional;-;-;;;;-;none;Negative;;Neither;480/mo DIY - negative keyword
+C5 Ontruiming;woningontruiming;1000;3;10.03;commercial;-;-;not top 20;not in pack;huisopruiming.nl (4 ads above);-;/ontruiming/;P1;YES;Both;1,000/mo, KD 3, CPC EUR 10. 4 ads + specialist Maps listings. Busje not in pack -> add GBP service + photos
+C5 Ontruiming;woningontruiming utrecht;140;0;15.75;navigational;-;-;;;;-;/ontruiming/;P1;YES;Both;140/mo, CPC EUR 15.75, competition medium
+C5 Ontruiming;woning ontruimen;720;21;n/a;commercial;-;-;;;;-;/ontruiming/;P2;;SEO;720/mo (SVS #2)
+C5 Ontruiming;kosten ontruiming woning na overlijden;140;0;5.18;informational;-;-;;;;-;NEW /ontruiming-na-overlijden/;P1;YES;SEO;140/mo, KD 0 - QUICK WIN
+C5 Ontruiming;bezemschoon opleveren;140;0;5.09;navigational;-;-;;;;-;/ontruiming/ FAQ;P2;;SEO;140/mo, KD 0
+C5 Ontruiming;ontruiming na overlijden;50;0;10.08;informational;-;-;;;;-;NEW /ontruiming-na-overlijden/;P2;;SEO;50/mo
+C5 Ontruiming;huis ontruiming na overlijden;40;6;12.01;informational;-;-;;;;-;NEW /ontruiming-na-overlijden/;P2;;SEO;"40/mo; VBU has /huis-ontruimen-na-overlijden/"
+C5 Ontruiming;ontruiming utrecht;70;0;10.07;navigational;-;-;;;;-;/ontruiming/;P3;;SEO;Ambiguous (news) - not for ads
+C6 Spoed;spoedverhuizing;110;0;5.58;commercial;#26;-;not top 20;not in pack;magicmovers.nl;/spoedverhuizing/ (#26);/spoedverhuizing/;P2;;Paid;110/mo. From Utrecht Busje is NOT in the Maps pack (Movenetjes, VBU are)
+C6 Spoed;spoed verhuizen;110;0;n/a;commercial;-;#3;;;;Maps #3 (national);/spoedverhuizing/;P2;;Paid;
+C7 Diensten;piano verhuizen;590;0;9.61;transactional;-;-;not top 20;#1;abcverhuizingen.nl;Maps #1 locally;NEW /piano-verhuizen/;P1;YES;Both;590/mo, KD 0, CPC EUR 9.61. You hold Maps #1 in Utrecht but have NO piano page -> QUICK WIN
+C7 Diensten;piano verhuizen kosten;260;0;6.21;commercial;-;-;;;;-;NEW /piano-verhuizen/;P1;YES;SEO;260/mo, KD 0 - QUICK WIN (MoveDirect shows 'vanaf EUR 270')
+C7 Diensten;seniorenverhuizing;260;0;5.0;commercial;-;-;;;;-;/senioren-verhuizen/ (rebuild);P1;YES;SEO;260/mo, KD 0 - QUICK WIN
+C7 Diensten;senioren verhuizer;480;0;n/a;commercial;-;#10;;;;Maps #10;/senioren-verhuizen/;P2;;SEO;480/mo
+C7 Diensten;bedrijfsverhuizing;210;3;12.49;commercial;-;-;;;;-;/zakelijk-verhuizen/;P2;;Both;210/mo, KD 3, CPC EUR 12.49
+C7 Diensten;interne verhuizing;40;0;9.57;informational;-;-;;;;-;/interne-verhuizing/;P3;;SEO;40/mo
+C7 Diensten;studentverhuizers utrecht;70;13;n/a;commercial;#25;-;;;;/ (#25);/studenten-verhuizen/ (rebuild);P2;;SEO;70/mo
+C7 Diensten;verhuizers inhuren;720;16;n/a;commercial;-;-;;;;-;/particulier-verhuizen/;P2;;SEO;720/mo, KD 16 (SVS #1)
+C8 Opslag;inboedel opslag;320;0;5.6;navigational;-;-;;;;-;/opslag-huren/;P2;;Both;320/mo, KD 0
+C8 Opslag;inboedel opslag kosten;140;0;5.74;informational;-;-;;;;-;/opslag-huren/;P2;;SEO;140/mo, KD 0 - add prices
+C8 Opslag;verhuizen en opslag;320;0;n/a;commercial;-;-;;;;-;/opslag-huren/;P2;;SEO;320/mo, VBU Maps #1
+C8 Opslag;opslag utrecht;260;13;14.69;navigational;-;-;;;;-;/opslag-huren/;P3;;Paid;Self-storage intent (CPC EUR 14.69)
+C8 Opslag;inboedelopslag utrecht;20;n/a;31.9;navigational;-;-;;;;-;/opslag-huren/;P2;;SEO;20/mo but CPC EUR 31.90
+C9 Regio;verhuisbedrijf amersfoort;320;1;14.55;commercial;#36;-;;;;/verhuisbedrijf-amersfoort/ (#36);same;P1;YES;Both;320/mo, KD 1 - biggest town opportunity
+C9 Regio;verhuisbedrijf hilversum;210;8;14.92;commercial;#40;-;;;;/verhuisbedrijf-hilversum/ (#40);same (rebuild);P2;;SEO;210/mo, KD 8
+C9 Regio;verhuisbedrijf nieuwegein;170;0;9.53;commercial;#27;-;;;;/verhuisbedrijf-nieuwegein/ (#27);same;P1;YES;Both;170/mo, KD 0
+C9 Regio;verhuisbedrijf zeist;170;0;11.27;commercial;-;-;not top 20;not in pack;vanbeekverhuizingen.nl;301 -> /werkgebied/ (not ranking);/verhuisbedrijf-zeist/;P1;YES;Both;170/mo, KD 0. Remove redirect
+C9 Regio;verhuisbedrijf veenendaal;170;0;11.0;navigational;#14;-;;;;/verhuisbedrijf-veenendaal/ (#14);same (rebuild);P2;;SEO;170/mo, already #14
+C9 Regio;verhuisbedrijf houten;90;0;13.1;commercial;#26;-;;;;/verhuisbedrijf-houten/ (#26);same;P1;;SEO;90/mo, KD 0
+C9 Regio;verhuisbedrijf woerden;90;0;14.57;commercial;#22;-;;;;/verhuisbedrijf-woerden/ (#22);same;P2;;SEO;90/mo, KD 0
+C9 Regio;verhuisbedrijf maarssen;70;0;16.44;commercial;#44;-;;;;/ (#44);/verhuisbedrijf-maarssen/ (new);P2;;SEO;70/mo
+C9 Regio;verhuisbedrijf ijsselstein;50;0;9.35;commercial;-;-;;;;-;/verhuisbedrijf-ijsselstein/;P2;;SEO;50/mo
+C9 Regio;verhuisbedrijf de bilt;50;0;8.33;commercial;-;-;;;;-;NEW;P3;;SEO;50/mo
+C9 Regio;verhuisbedrijf bilthoven;40;0;14.77;commercial;-;-;;;;-;NEW (with De Bilt);P3;;SEO;40/mo
+C9 Regio;verhuisbedrijf de meern;40;0;6.24;commercial;-;-;;;;-;NEW /verhuisbedrijf-vleuten-de-meern/;P3;;SEO;40+10/mo
+C9 Regio;verhuisbedrijf breukelen;30;n/a;12.91;navigational;-;-;;;;/verhuisbedrijf-breukelen/;same;P3;;SEO;30/mo
+C10 Tools & tips;m3 berekenen;1900;0;n/a;informational;-;-;;;;-;/m3-calculator/;P1;YES;SEO;1,900/mo, KD 0. VBU #3 with its calculator - you have one already
+C10 Tools & tips;wasmachine verhuizen;880;0;5.54;commercial;#69;-;;;;post (#65-69);/tips-voor-verhuizen-van-uw-wasmachine/;P1;YES;SEO;880/mo, KD 0 - big content win
+C10 Tools & tips;wasmachine verhuizen zonder transportbouten;40;0;2.78;informational;-;-;;;;-;same (H2);P2;;SEO;40/mo
+C10 Tools & tips;verhuiswagen;880;0;n/a;commercial;-;#6;;;;Maps #6;/tarieven/ or transport page;P3;;SEO;880/mo, mixed rent intent
+C10 Tools & tips;hoeveel verhuisdozen nodig;320;0;n/a;informational;-;-;;;;-;NEW blog;P2;;SEO;320/mo, KD 0 (VBU #3)
+C10 Tools & tips;verhuistips;210;0;0.81;informational;-;-;;;;-;/verhuistips/;P3;;SEO;210/mo
+C10 Tools & tips;verhuischecklist;170;11;0.82;informational;-;-;;;;-;checklist;P3;;SEO;170/mo (lower than estimated)
+C11 English;moving company utrecht;70;2;15.71;commercial;#35;#9;;;;/ (#35), Maps #9;NEW /en/;P2;;Paid first;70/mo, KD 2, CPC EUR 15.71
+X Negatives;verhuisbus huren utrecht;390;0;4.68;transactional;#56;-;;;;-;none;Negative;;Neither;390/mo DIY van rental
+X Negatives;verhuisbedrijf utrecht vacatures;10;n/a;4.25;navigational;-;-;;;;-;none;Negative;;Neither;

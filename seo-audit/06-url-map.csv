@@ -1,0 +1,84 @@
+live_url,redesign_file,recommended_action,target_url,reason,confidence
+https://www.busje-komtzo.nl/,index.html,KEEP - replace content,/,Same slug,measured
+/over-ons/,over-ons.html,KEEP - replace content,/over-ons/,Same slug,measured
+/opslag-huren/,opslag-en-verhuizen.html,KEEP - replace content,/opslag-huren/,Same slug (file name differs; link offerte/footers to /opslag-huren/),measured
+/zakelijk-verhuizen/,zakelijk-verhuizen.html,KEEP - replace content,/zakelijk-verhuizen/,Same slug,measured
+/spoedverhuizing/,spoedverhuizing.html,KEEP - replace content,/spoedverhuizing/,Same slug,measured
+/particulier-verhuizen/,particulier-verhuizen.html,KEEP - replace content,/particulier-verhuizen/,Same slug,measured
+/tarieven/,tarieven.html,KEEP - replace content,/tarieven/,Same slug,measured
+/diensten/,diensten.html,KEEP - replace content,/diensten/,Same slug,measured
+/verhuistips/,verhuistips.html,KEEP - replace content,/verhuistips/,Already partly live with 09-08f version,measured
+/werkwijze/,werkwijze.html,KEEP - replace content,/werkwijze/,Already partly live with 09-08f version,measured
+/werkgebied/,werkgebied-utrecht.html,KEEP - replace content,/werkgebied/,Already partly live with 09-08f version,measured
+/offerteaanvraag/,offerte.html,KEEP - replace content,/offerteaanvraag/,Same slug; all offerte.html links must point here,measured
+/m3-calculator/,m3-calculator.html,KEEP - replace content,/m3-calculator/,Same slug,measured
+/ontruiming/,ontruiming.html,KEEP - replace content,/ontruiming/,Same slug,measured
+/verhuislift-huren/,verhuislift-huren.html,KEEP - replace content,/verhuislift-huren/,Same slug,measured
+/interne-verhuizing/,interne-verhuizing.html,KEEP - replace content,/interne-verhuizing/,Same slug,measured
+/algemene-voorwaarden/,algemene-voorwaarden.html,KEEP - replace content,/algemene-voorwaarden/,Same slug,measured
+/beoordelingen/,beoordelingen.html,KEEP - replace content,/beoordelingen/,Same slug,measured
+/bedankt/,bedankt.html,KEEP - replace content (noindex),/bedankt/,Keep noindex in Rank Math,measured
+/voorkom-verhuis-stress-met-de-verhuischecklist/,verhuischecklist.html,KEEP - replace content,/voorkom-verhuis-stress-met-de-verhuischecklist/,Ranking slug; do not shorten,measured
+/wat-kost-een-verhuizing-in-utrecht-complete-prijsgids-tips-2026/,prijsgids-verhuizen-utrecht.html,KEEP - replace content,/wat-kost-een-verhuizing-in-utrecht-complete-prijsgids-tips-2026/,Ranking slug; '2026' in slug will date - update title yearly instead,measured
+/wanneer-wel-of-geen-verhuislift-inzetten/,verhuislift-beslisgids.html,KEEP - replace content,/wanneer-wel-of-geen-verhuislift-inzetten/,Ranking slug,measured
+/tips-voor-verhuizen-van-uw-wasmachine/,wasmachine-verhuizen.html,KEEP - replace content,/tips-voor-verhuizen-van-uw-wasmachine/,Ranking slug,measured
+/verhuisbedrijf-utrecht/,verhuisbedrijf-utrecht.html,KEEP - replace content (restore depth first),/verhuisbedrijf-utrecht/,Money page - see audit O1/O2/O3,measured
+/verhuisbedrijf-amersfoort/,verhuisbedrijf-amersfoort.html,KEEP - replace content,/verhuisbedrijf-amersfoort/,Same slug,measured
+/verhuisbedrijf-houten/,verhuisbedrijf-houten.html,KEEP - replace content,/verhuisbedrijf-houten/,Same slug,measured
+/verhuisbedrijf-ijsselstein/,verhuisbedrijf-ijsselstein.html,KEEP - replace content,/verhuisbedrijf-ijsselstein/,Same slug,measured
+/verhuisbedrijf-nieuwegein/,verhuisbedrijf-nieuwegein.html,KEEP - replace content,/verhuisbedrijf-nieuwegein/,Same slug,measured
+/verhuisbedrijf-woerden/,verhuisbedrijf-woerden.html,KEEP - replace content,/verhuisbedrijf-woerden/,Same slug,measured
+/verhuisbedrijf-zeist/,verhuisbedrijf-zeist.html,REMOVE existing 301 then PUBLISH,/verhuisbedrijf-zeist/,Live currently 301 -> /werkgebied/,measured
+(new) /verhuisbedrijf-maarssen/,verhuisbedrijf-maarssen.html,PUBLISH new page,/verhuisbedrijf-maarssen/,404 on live today,measured
+(new) /privacyverklaring/,privacyverklaring.html,PUBLISH new page,/privacyverklaring/,404 on live today; keep /cookie-policy/,measured
+/inpakservice/,(none - linked from index/diensten),KEEP live page (or rebuild in new design),/inpakservice/,Redesign links to it,measured
+/transport-koerier/,(none - linked from index/diensten),KEEP live page (or rebuild in new design),/transport-koerier/,Redesign links to it,measured
+/cookie-policy/,(none),KEEP,/cookie-policy/,Legal; link from footer,measured
+/verhuisliftservice/,(none),301,/verhuislift-huren/,Duplicate topic,estimated - check GSC first
+/ontruimservice/,(none),301,/ontruiming/,Duplicate topic,estimated - check GSC first
+/reviews-verhuisbedrijf-utrecht/,(none),301,/beoordelingen/,Duplicate topic,estimated - check GSC first
+/faq/,(none),KEEP or 301,/werkwijze/ or keep,Check traffic; FAQ content can move to service pages,assumption
+/studenten-verhuizen/,(none),KEEP (rebuild later in new design),/studenten-verhuizen/,Autocomplete shows 'student verhuizers utrecht' demand,measured demand / estimated value
+/senioren-verhuizen/,(none),KEEP (rebuild later in new design),/senioren-verhuizen/,'seniorenverhuizing utrecht' demand,measured demand / estimated value
+/klusjesman-service/,(none),KEEP or 301,/diensten/,Off-topic for moving; check traffic,assumption
+/producten/,(none),KEEP or 301,/diensten/,Check what it sells (verhuisdozen?),assumption
+/nieuws/,(none),KEEP (blog index),/nieuws/,Blog archive,measured
+/internationaal-verhuizen-busje-komt-zo-regelt-uw-internationale-verhuizing/,(none),KEEP,same,Unique service,measured
+/verhuisbedrijf-veenendaal/,(none),KEEP (rebuild in new design phase 2),same,Ranks #14 for verhuisbedrijf veenendaal (170/mo),measured
+/verhuisbedrijf-breukelen/,(none),KEEP (rebuild in new design phase 2),same,Province of Utrecht - in scope,estimated
+/verhuisbedrijf-hilversum/,(none),KEEP (rebuild in new design phase 2),same,Mentioned in home copy,estimated
+/verhuisbedrijf-amsterdam/,(none),KEEP - decide with GSC data,same,Outside core area; high competition,assumption
+/verhuisbedrijf-rotterdam/,(none),KEEP - decide with GSC data,same,Outside core area,assumption
+/verhuisbedrijf-den-haag/,(none),KEEP - decide with GSC data,same,Outside core area,assumption
+/verhuisbedrijf-almere/,(none),KEEP - decide with GSC data,same,Outside core area,assumption
+/verhuisbedrijf-lelystad/,(none),KEEP - decide with GSC data,same,Outside core area,assumption
+/verhuisbedrijf-leiden/,(none),KEEP - decide with GSC data,same,Outside core area,assumption
+/verhuisbedrijf-delft/,(none),KEEP,same,Ranks #16 for verhuisbedrijf delft (260/mo),measured
+/verhuisbedrijf-zoetermeer/,(none),KEEP,same,Ranks #19 for verhuisbedrijf zoetermeer (390/mo),measured
+/verhuisbedrijf-dordrecht/,(none),KEEP - decide with GSC data,same,Outside core area,assumption
+/verhuisbedrijf-gorinchem/,(none),KEEP - decide with GSC data,same,Outside core area,assumption
+/verhuisbedrijf-tiel/,(none),KEEP - decide with GSC data,same,Outside core area,assumption
+/verhuisbedrijf-nijmegen/,(none),KEEP - decide with GSC data,same,Outside core area,assumption
+/verhuisbedrijf-arnhem/,(none),KEEP - decide with GSC data,same,Outside core area,assumption
+/verhuisbedrijf-apeldoorn/,(none),KEEP - decide with GSC data,same,Outside core area,assumption
+/verhuisbedrijf-den-bosch/,(none),KEEP - decide with GSC data,same,Outside core area,assumption
+/verhuisbedrijf-oss/,(none),KEEP,same,Ranks #11 for verhuisbedrijf oss (170/mo),measured
+/verhuisbedrijf-tilburg/,(none),KEEP - decide with GSC data,same,Outside core area,assumption
+/verhuisbedrijf-breda/,(none),KEEP - decide with GSC data,same,Outside core area,assumption
+/verhuisbedrijf-waalwijk/,(none),KEEP - decide with GSC data,same,Outside core area,assumption
+/verhuisbedrijf-eindhoven/,(none),KEEP,same,Ranks #11 for verhuisbedrijf eindhoven (480/mo) and #12 verhuizen eindhoven,measured
+/veelgestelde-vragen-over-verhuizen-naar-tiel/,(none),301 or KEEP,/verhuisbedrijf-tiel/,Very narrow topic,assumption
+/tijdelijke-opslag-nodig/,(none - post),301,/opslag-huren/,Cannibalises opslag page,estimated - check GSC first
+/verhuislift-utrecht/,(none - post),KEEP now; 301 to /verhuislift-huren/ only after the new page is live and indexed,/verhuislift-huren/,This post is the URL ranking #17 verhuislift utrecht and #38 verhuislift huren utrecht,measured
+/verhuizen-met-gemak-met-onze-verhuislift/,(none - post),301,/verhuislift-huren/,Cannibalises verhuislift page,estimated - check GSC first
+/verhuizing-binnen-utrecht-alles-veilig-via-het-raam/,(none - post),KEEP + link to /verhuislift-huren/,same,Supporting article,estimated
+/verhuislift-denhaag-leusden/,(none - post),KEEP,same,Case story,estimated
+/zakelijke-particuliere-verhuizingen-utrecht/,(none - post),301,/verhuisbedrijf-utrecht/,Generic duplicate of money page,estimated - check GSC first
+/geen-weekendtarief-bij-busje-komt-zo/,(none - post),KEEP + link to /tarieven/,same,USP article,estimated
+/busje-komt-zo-voorkomt-beschadigingen/,(none - post),KEEP,same,Trust article,estimated
+/zo-gaan-wij-met-uw-spullen-om/,(none - post),KEEP,same,Trust article,estimated
+/hittegolf-of-niet-wij-verhuizen-gewoon-door/,(none - post),KEEP,same,News,estimated
+/piano-verhuizen-geen-probleem/,(none - post),KEEP,same,Piano service page removed at owner's request; keep the old post as it is,measured
+/verhuizing-van-belgie-naar-nederland-met-demontage/,(none - post),KEEP,same,Case story,estimated
+/internationaal-verhuizen-naar-duitsland/,(none - post),KEEP,same,Case story,estimated
+/verhuizing-van-duitsland-naar-papendrecht/,(none - post),KEEP,same,Case story,estimated
