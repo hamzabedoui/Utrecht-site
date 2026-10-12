@@ -232,3 +232,10 @@ T1 verhuisbedrijf-utrecht → T2 verhuislift-huren → T5 tarieven → T6 prijsg
 2. **Merge `/interne-verhuizing/` into `/zakelijk-verhuizen/`**: yes, with a 301 to `/zakelijk-verhuizen/#interne-verhuizing`.
 3. **The 6 title and H1 changes in §2**: approved.
 4. **Facts** (lift price, storage, opname, local photos and reviews): not available yet. The rebuild uses only facts already on the site. The lift stays "prijs vooraf afgestemd", storage gets no price, and city pages get no reused photo.
+
+## 8. Change of approach (Hamza, 2026-10-12)
+"All the content should return like it was, with just the redesign; the content shouldn't change."
+- Every page now keeps its **original content byte for byte** (`<main>`, title, meta, canonical, schema and H1 are checked to be identical to commit `2a58002`). The rewritten Verhuisbedrijf Utrecht and Verhuislift pages were replaced by their originals in the new design.
+- The template rewrites, title and H1 changes, the interne→zakelijk merge and new content in §2–§6 are **on hold**. The duplicate-content findings in 07 remain true and are a content decision for later.
+- How it works: `redesign/_build/reskin.js` keeps each original page, swaps the header, footer and bottom bar for the new shared partials (with the original menu and footer content), and builds `assets/css/pages.css`: the original styles scoped to `<main>` in a cascade layer, with colours and type remapped to the design system by `redesign/_build/bridge.css`.
+- The bottom bar on phones shows icons only (Bel, WhatsApp, Offerte), with spoken labels for screen readers.

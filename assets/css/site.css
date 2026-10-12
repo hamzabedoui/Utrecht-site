@@ -528,6 +528,7 @@
   @media (min-width: 24rem) and (max-width: 47.99rem) {
     .footer-grid { grid-template-columns: 1fr 1fr; column-gap: var(--space-5); }
     .footer-grid > :first-child { grid-column: 1 / -1; }
+    .footer-grid--5 > :last-child { grid-column: 1 / -1; }
   }
 }
 
@@ -545,4 +546,54 @@
     .scroller:focus-visible { outline: 3px solid var(--focus-ring); outline-offset: 2px; }
   }
 
+}
+
+/* ===== 8. Original menu/footer content in the new chrome (2026-10-12) ===== */
+@layer sections {
+  /* Utility bar above the header (desktop) */
+  .utility-bar { display: none; background: var(--petrol-50); border-block-end: var(--border); font-size: var(--step--1); }
+  @media (min-width: 64rem) { .utility-bar { display: block; } }
+  .utility-bar__row { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); min-block-size: 2.75rem; }
+  .utility-bar__area, .utility-bar__links a { display: inline-flex; align-items: center; gap: var(--space-2); color: var(--color-text-soft); }
+  .utility-bar__links { display: flex; gap: var(--space-5); }
+  .utility-bar__links a { min-block-size: 2.75rem; text-decoration: none; }
+  .utility-bar__links a:hover { color: var(--color-brand); text-decoration: underline; }
+  .utility-bar .icon { inline-size: 1rem; block-size: 1rem; color: var(--color-brand); }
+  /* Extra menu items live in the utility bar on desktop, in the menu on phones */
+  @media (min-width: 64rem) { .site-nav .nav-extra { display: none; } }
+  /* With the utility bar showing the number, the header phone link is not needed */
+  @media (min-width: 64rem) { .utility-bar ~ .site-header__bar .header-call { display: none; } }
+
+  /* Footer lead: the original call to action band at the top of the footer */
+  .footer-lead { background: var(--petrol-900); padding-block: var(--space-7); }
+  .footer-lead__row { display: grid; gap: var(--space-5); }
+  @media (min-width: 64rem) { .footer-lead__row { grid-template-columns: 1fr auto; align-items: center; gap: var(--space-8); } }
+  .footer-lead__kicker { color: var(--color-on-dark-soft); font-weight: 700; }
+  .footer-lead h2 { color: var(--white); font-size: var(--step-3); }
+  .footer-lead .btn--secondary { color: var(--white); }
+  .site-footer .btn--primary { color: var(--color-on-signal); }
+  .footer-lead .btn--secondary:hover { background: rgb(255 255 255 / 0.1); }
+  @media (max-width: 35.99rem) { .footer-lead__actions .btn { flex: 1 1 100%; } }
+  .site-footer:has(.footer-lead) { padding-block-start: 0; }
+  .site-footer .footer-lead + .wrap { margin-block-start: var(--space-7); }
+
+  /* Five footer columns: brand, diensten, werkgebied, informatie, contact */
+  @media (min-width: 64rem) { .footer-grid--5 { grid-template-columns: 1.3fr 1fr 1fr 1fr 1.2fr; } }
+  .footer-logo { display: inline-block; padding: var(--space-2) var(--space-3); background: var(--white); border-radius: var(--radius-sm); }
+  .footer-logo img { inline-size: 10rem; }
+  .footer-rating { display: inline-flex; align-items: center; gap: var(--space-2); min-block-size: 2.75rem; }
+  .footer-rating .icon--brand { inline-size: 1.25rem; block-size: 1.25rem; }
+  .legal__nav { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-5); }
+  .legal__button { min-block-size: 2.75rem; padding: 0; background: none; border: 0; color: var(--color-on-dark-soft); text-decoration: underline; text-underline-offset: 0.2em; cursor: pointer; font-size: inherit; }
+
+  /* Bottom action bar with icons only (labels via aria-label) */
+  .action-bar--icons { grid-template-columns: repeat(3, 1fr); }
+  .action-bar--icons .btn { padding: 0; min-block-size: 3.25rem; }
+  .action-bar--icons .icon { inline-size: 1.6rem; block-size: 1.6rem; }
+  .btn--whatsapp { background: #1f7a45; color: var(--white); }
+  .btn--whatsapp:hover { background: #17633a; }
+
+  /* Hero headline: avoid a lone first word on narrow screens */
+  .hero h1 { text-wrap: pretty; }
+  .plate b { white-space: nowrap; }
 }

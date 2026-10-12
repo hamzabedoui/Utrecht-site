@@ -1,0 +1,67 @@
+/* ---- Bridge: maps the original page styles onto the "Op route" design system ---- */
+:scope {
+  --ink: #00303f;
+  --ink-strong: #00232f;
+  --muted: #5a6e75;
+  --teal: #004e66;
+  --teal-dark: #00303f;
+  --teal-deep: #00303f;
+  --teal-soft: #dce8eb;
+  --orange: #ea8c14;
+  --orange-dark: #9a5400; /* text-safe on white (5.6:1) */
+  --orange-soft: #fcebd2;
+  --sand: #f2f6f7;
+  --paper: #f2f6f7;
+  --white: #ffffff;
+  --line: #c9d6da;
+  --line-strong: #b9cbd1;
+  --focus: #00303f;
+  --radius-sm: 6px;
+  --radius: 8px;
+  --radius-lg: 8px;
+  --shadow-xs: none;
+  --shadow-sm: 0 1px 0 rgb(0 48 63 / 0.06);
+  --shadow-md: 0 8px 24px rgb(0 48 63 / 0.12);
+  font-family: var(--font-sans);
+  letter-spacing: 0;
+}
+/* One typeface everywhere, design-system weights */
+:is(h1, h2, h3, h4, .h, p, li, a, button, input, select, textarea, label, span, strong, small, dt, dd, summary, blockquote, figcaption) {
+  font-family: var(--font-sans);
+  letter-spacing: normal;
+}
+:is(h1, h2, h3, .h) { font-weight: 800; letter-spacing: -0.01em; text-wrap: balance; }
+h1 { font-size: var(--step-4); line-height: 1.1; }
+h2 { font-size: var(--step-3); line-height: 1.1; }
+h3 { font-size: var(--step-2); line-height: 1.15; font-weight: 700; }
+/* Labels above headings: sentence case, no tracking (content unchanged, only the styling) */
+.eyebrow { text-transform: none; letter-spacing: 0; font-size: var(--step--1); font-weight: 700; }
+/* Buttons: design-system shapes and colours */
+.button { min-height: 48px; border-radius: 6px; box-shadow: none; font-weight: 700; }
+.button-gold { border-color: var(--orange); background: var(--orange); color: var(--ink); box-shadow: none; }
+.button-gold:hover { border-color: #f5a33b; background: #f5a33b; color: var(--ink); }
+.button-secondary { background: transparent; color: var(--teal); border-color: var(--teal); }
+.button-secondary:hover { background: var(--teal-soft); }
+.button-whatsapp { box-shadow: none; }
+:is(.card-number, .trust-ico, .svc-ico, .pack-ico, .choice-ico, .terms-ico) { color: var(--teal); }
+img { border-radius: var(--radius); }
+/* Text on the dark map card and checklist panel */
+.map-card p, .map-card em { color: #b9cbd1; }
+/* Design fixes for blocks whose original styling assumed a dark background that was missing */
+.cta-section .cta-panel { display: grid; gap: var(--space-5); padding: clamp(1.5rem, 1rem + 2vw, 3rem); background: #00303f; color: #fff; border-radius: 8px; }
+@media (min-width: 56rem) { .cta-section .cta-panel { grid-template-columns: 1fr auto; align-items: center; } }
+.cta-section .cta-panel :is(h2, p) { color: #fff; }
+.cta-section .cta-panel .eyebrow { color: #b9cbd1; }
+:not(.editorial-section) > .editorial-grid h2, :not(.editorial-section) > .editorial-grid .check-list { color: var(--ink); }
+:not(.editorial-section) > .editorial-grid .eyebrow { color: var(--teal); }
+:not(.editorial-section) > .editorial-grid p:not(.eyebrow) { color: var(--muted); }
+:not(.editorial-section) > .editorial-grid .text-link { color: var(--teal); }
+:not(.editorial-section) > .editorial-grid .button-on-dark { border-color: var(--teal); color: var(--teal); }
+:not(.editorial-section) > .editorial-grid .button-on-dark:hover { background: var(--teal-soft); color: var(--teal); }
+.content-grid > .map-card > p:not(.eyebrow), .map-card.map-card p { color: rgb(255 255 255 / 0.8); }
+.lead-magnet.lead-magnet em { color: #b9cbd1; }
+.editorial-section .source-links a { color: #fff; }
+.checklist-cta .button-on-dark { border-color: var(--teal); color: var(--teal); }
+.checklist-cta .button-on-dark:hover { background: var(--teal-soft); color: var(--teal); }
+/* No heavy bar under the header: the new header already separates itself */
+:is(.hero, .service-hero, .inner-hero, .quote-hero)::after { display: none; }
