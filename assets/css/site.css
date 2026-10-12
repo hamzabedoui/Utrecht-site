@@ -647,3 +647,11 @@
     .review-grid.scroller .review { inline-size: 100%; }
   }
 }
+
+/* ===== 10. Carousels: one whole card at a time on phones (2026-10-12) ===== */
+@layer utilities {
+  @media (max-width: 47.99rem) {
+    .scroller { margin-inline: 0; padding-inline: 0; scroll-padding-inline: 0; gap: var(--space-4); }
+    .scroller > * { flex: 0 0 100%; }
+  }
+}
